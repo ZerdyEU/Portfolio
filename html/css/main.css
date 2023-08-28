@@ -1,0 +1,330 @@
+html {
+    scroll-behavior: smooth;
+}
+
+a   {
+    cursor: pointer;
+}
+body {
+    background-color: #1e1e1e;
+}
+.header-main {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;   
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Poppins', sans-serif;
+    font-size: 50px;
+    z-index: 999;
+    background-color: #1e1e1e;
+    border-bottom: 2px solid #df0cd8;
+}
+.header-main-logo {
+    width: fit-content;
+    height: 100%;
+    display: flex;
+}
+.header-main-logo img {
+    height: 100%;
+}
+.header-main-nav {
+    width: fit-content;
+    height: 100%;
+}
+.header-main-nav ul {
+    list-style: none;
+}
+.header-main-nav ul li {
+    display: inline;
+    float: left;
+    padding: 0 15px;
+    line-height: 60px;
+    display: block;
+}
+
+.header-main-nav ul li a {
+    color: #fff;
+    transition: all ease-in-out 200ms;
+}
+
+.header-main-nav ul li a:hover {
+    color: #df0cd8;
+}
+
+.header-main-socmed-ig {
+    width: 35px;
+    height: 35px;
+    background-image: url(../src/img/ikonky/instagram.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 12.5px;
+    transition: all ease-in-out 200ms;
+
+}
+.header-main-socmed-ig:hover {
+    background-image: url(../src/img/ikonky/instagram-hover.png);
+}
+.header-main-socmed-fb {
+    width: 35px;
+    height: 35px;
+    background-image: url(../src/img/ikonky/facebook.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: -15px;
+    margin-top: 12.5px;
+    transition: all ease-in-out 200ms;
+}
+.header-main-socmed-fb:hover {
+    transition: all ease-in-out 200ms;
+    background-image: url(../src/img/ikonky/facebook-hover.png);
+}
+
+.header-main-nav ul li ul {
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+    position: absolute;
+    transition: all ease-in-out 200ms;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border-left: 2px solid #df0cd8;
+    border-right: 2px solid #df0cd8;
+}
+
+.header-main-nav ul li ul li {
+    border-bottom: 2px solid #df0cd8;
+    line-height: fit-content;
+}
+
+.header-main-nav ul li:hover>ul{
+    visibility: visible;
+    opacity: 1;
+    display: flex;
+    background-color: #1e1e1e;
+
+}
+
+.footer {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    text-transform: uppercase;
+    margin: 30px 0px;
+}
+
+.footer-nav {
+    font-size: 22px;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    -webkit-text-stroke: 0.5px black;
+    text-shadow:
+        3px 3px 0 #000,
+        -1px -1px 0 #000,  
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+    margin-left: 5%;
+    flex-basis: 100%;
+    display: flex;
+    border-left: 3px solid #df0cd8;
+}
+
+.footer-nav ul:nth-child(1) {
+    flex-basis: 150px;
+    padding-left: 15px;
+}
+
+.footer-kontakt {
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    -webkit-text-stroke: 0.5px black;
+    text-shadow:
+        3px 3px 0 #000,
+        -1px -1px 0 #000,  
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+    flex-grow: 1;
+    margin-right: 5%;
+    flex-basis: 500px;
+    text-align: right;
+}
+
+.footer-nav ul li a {
+    color: #fff;
+    transition: all ease-in-out 200ms;
+}
+
+.footer-nav ul li a:hover {
+    color: #df0cd8;
+}
+
+.footer-kontakt h3 {
+    font-size: 25px;
+    font-family: 'Poppins', sans-serif;
+    color: #df0cd8;
+    -webkit-text-stroke: 0.5px black;
+    text-shadow:
+        3px 3px 0 #000,
+        -1px -1px 0 #000,  
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+}
+
+.footer-kontakt ul li a {
+    color: #fff;
+    transition: all ease-in-out 200ms;
+}
+
+.footer-kontakt ul li a:hover {
+    color: #df0cd8;
+}
+
+
+
+
+/* MOBILNÍ VERZE */
+
+.burger-menu,
+.burger-menu-tlacitko {
+    display: none;
+}
+
+@media only screen and (max-width:800px) {
+    
+    .header-main-logo {
+        padding-left: 5px;
+    }
+    .header-main-nav {
+        display:none
+    }
+    .footer {
+        display: flex;
+        width: 100%;
+        text-transform: uppercase;
+        flex-wrap: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    
+    .footer-nav {
+        font-size: 1.2rem;
+        font-family: 'Poppins', sans-serif;
+        color: #fff;
+        -webkit-text-stroke: 0.5px black;
+        text-shadow:
+            3px 3px 0 #000,
+            -1px -1px 0 #000,  
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000;
+        margin-left: 5%;
+        flex-basis: 100%;
+        display: flex;
+        text-align: center;
+        border-left: 0px solid #1e1e1e;
+    }
+    
+    .footer-nav ul:nth-child(1) {
+        align-self: center;
+    }
+    
+    .footer-kontakt {
+        font-size: 1rem;
+        font-family: 'Poppins', sans-serif;
+        color: #fff;
+        -webkit-text-stroke: 0.5px black;
+        text-shadow:
+            3px 3px 0 #000,
+            -1px -1px 0 #000,  
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000;
+        flex-grow: 1;
+        text-align: center;
+        flex-basis: auto;
+        padding: 15px 0;
+    }
+    .footer-kontakt h3 {
+        font-size: 1.2rem;
+        font-family: 'Poppins', sans-serif;
+        color: #df0cd8;
+        -webkit-text-stroke: 0.5px black;
+        text-shadow:
+            3px 3px 0 #000,
+            -1px -1px 0 #000,  
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000;
+    }
+    
+    .footer-kontakt ul li a {
+        color: #fff;
+        transition: all ease-in-out 200ms;
+    }
+
+    .burger-menu-tlacitko {
+        display: block;
+        width: 60px;
+        height: 60px;
+        padding-right: 10px;
+        background-image: url(../src/img/ikonky/burger-menu.png), url(../src/img/ikonky/close.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center, center left 60px;
+    }
+
+    .burger-menu {
+        display: none;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        z-index: 950;
+        background-color: #1e1e1e;
+    }
+
+    .burger-menu ul {
+        width: 100%;
+        height: calc(100vh - 60px);
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+    }
+
+    .burger-menu ul li {
+        flex-basis: 100%;
+        border-top: 2px solid #df0cd8;
+    }
+
+    .burger-menu ul li:first-child {
+        border-top: none;
+    }
+
+    .burger-menu ul li:last-child {
+        border-bottom: 2px solid #df0cd8;
+    }
+
+    .burger-menu ul li a {
+        display: block;
+        height: 100%;
+        font-size: 2.5rem;
+        font-family: 'Poppins', sans-serif;
+        color: #df0cd8;
+        padding: 30px 0;
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    .header-main-socmed-ig {
+        display: none;
+        
+    }
+    .header-main-socmed-fb {
+        display: none;
+    }
+}

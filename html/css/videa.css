@@ -1,0 +1,81 @@
+#galerie {
+    color: #df0cd8;
+}
+
+#galerie2 {
+    color: #df0cd8;
+}
+
+#videa {
+    color: #df0cd8;
+}
+
+main {
+    margin-top: 100px;
+    border-bottom: 2px solid #df0cd8;
+}
+
+.galerie {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+    .galerie {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+.galerie video {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.galerie video.full {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    object-fit: scale-down;
+}
+
+#vClose {
+    position: fixed;
+    display: none;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 10px 15px;
+    color: #fff;
+    background: #741414;
+    cursor: pointer;
+}
+#vClose.show {
+    display: block;
+}
+
+.vWrap {
+    color: #fff;
+    background: #1e1e1e;
+}
+.vCaption {
+    padding: 10px;
+    text-align: center;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+

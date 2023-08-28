@@ -1,0 +1,31 @@
+#galerie {
+    color: #df0cd8;
+}
+
+#galerie2 {
+    color: #df0cd8;
+}
+
+.proklik {
+    width: 100%;
+    height: calc(100vh - 60px);
+    margin-top: 60px;
+    border-bottom: 2px solid #df0cd8;
+    align-self: center;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.proklik a {
+    font-size: 30vw;
+}
+
+@media only screen and (max-width:800px) {
+    .proklik {
+        align-items: center;
+        flex-direction: column;
+    }
+    .proklik a {
+        font-size: 70vw;
+    }
+}
